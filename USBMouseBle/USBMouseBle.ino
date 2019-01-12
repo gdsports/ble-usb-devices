@@ -275,6 +275,11 @@ void setup(void)
   dbprintln(F("then open an application that accepts mouse input"));
   dbprintln();
 
+  if (UsbH.Init())
+    dbprintln(F("USB host did not start."));
+
+  delay( 200 );
+
   HidMouse.SetReportParser(0, &Prs);
 }
 

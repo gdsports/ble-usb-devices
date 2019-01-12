@@ -71,9 +71,12 @@ USBHub  Hub1(&UsbH);
 USBHub  Hub2(&UsbH);
 USBHub  Hub3(&UsbH);
 USBHub  Hub4(&UsbH);
-USBH_MIDI MIDIUSBH(&UsbH);
+USBH_MIDI MIDIUSBH1(&UsbH);
+USBH_MIDI MIDIUSBH2(&UsbH);
+USBH_MIDI MIDIUSBH3(&UsbH);
+USBH_MIDI MIDIUSBH4(&UsbH);
 
-void USBHost_to_BLE()
+void USBHost_to_BLE(USBH_MIDI &MIDIUSBH)
 {
   uint8_t recvBuf[MIDI_EVENT_PACKET_SIZE];
   uint8_t rcode = 0;     //return code
@@ -366,11 +369,32 @@ void loop(void)
   if (! isConnected)
     return;
 
-  if (MIDIUSBH) {
+  if (MIDIUSBH1) {
     /* MIDI BLE -> MIDI USB Host */
     //BLE_to_USBHost();
 
     /* MIDI USB Host -> MIDI BLE */
-    USBHost_to_BLE();
+    USBHost_to_BLE(MIDIUSBH1);
+  }
+  if (MIDIUSBH2) {
+    /* MIDI BLE -> MIDI USB Host */
+    //BLE_to_USBHost();
+
+    /* MIDI USB Host -> MIDI BLE */
+    USBHost_to_BLE(MIDIUSBH2);
+  }
+  if (MIDIUSBH3) {
+    /* MIDI BLE -> MIDI USB Host */
+    //BLE_to_USBHost();
+
+    /* MIDI USB Host -> MIDI BLE */
+    USBHost_to_BLE(MIDIUSBH3);
+  }
+  if (MIDIUSBH4) {
+    /* MIDI BLE -> MIDI USB Host */
+    //BLE_to_USBHost();
+
+    /* MIDI USB Host -> MIDI BLE */
+    USBHost_to_BLE(MIDIUSBH4);
   }
 }

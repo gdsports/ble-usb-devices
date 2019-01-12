@@ -21,6 +21,12 @@ Be sure to follow [Adafruit's
 tutorial](https://learn.adafruit.com/adafruit-feather-m0-bluefruit-le/overview)
 to make sure the boards work and the libraries are installed.
 
+## Required library
+
+The [USB Host Library for
+SAMD](https://github.com/gdsports/USB_Host_Library_SAMD) must be installed
+because it adds USB host drivers for USB keyboard, mouse, and MIDI devices.
+
 ## Connection
 
 ```
@@ -56,5 +62,5 @@ button MMO gaming mice need not apply.
 
 Tested on a MIDI keyboard and an iPad using the free "midimittr" and "iGrand
 Piano" apps. Auto connect after power off/on does not work but forgetting the
-Bluefruit then re-pairing it works. Also close and opeing the midimittr app is
+Bluefruit then re-pairing it works. Also close and opening the midimittr app is
 also required.
