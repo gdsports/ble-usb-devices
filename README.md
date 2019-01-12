@@ -34,7 +34,7 @@ Keyboard -> cable/adapter -> Feather M0 BLE
                              CP2104 USB to serial -> Computer or 5V power supply
 ```
 
-Substitute keyboard with mouse or MIDI device.
+Substitute keyboard with mouse or MIDI device and use the corresponding sketch.
 
 
 ## USBKbdBle -- USB Keyboard to BLE
