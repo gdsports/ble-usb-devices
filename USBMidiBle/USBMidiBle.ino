@@ -215,7 +215,7 @@ void BLE_to_USBHost()
 
 /*******************************************************************/
 
-#define FACTORYRESET_ENABLE         0
+#define FACTORYRESET_ENABLE         1
 #define MINIMUM_FIRMWARE_VERSION    "0.7.0"
 
 // This app was tested on iOS with the following apps:
